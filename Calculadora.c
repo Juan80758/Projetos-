@@ -16,7 +16,10 @@ int main(){
         resultado = num1 + num2;
     } else if(operador == '-') {
         resultado = num1 - num2;
+    } else if(operador == '*') {
+        resultado = num1 * num2;
     }
     printf("O resultado foi: %.2f \n", resultado);
+
     return 0;
 }
