@@ -28,5 +28,7 @@ int main(){
     }
     printf("O resultado foi: %.2f \n", resultado);
 
+    system("pause");
+
     return 0;
 }
