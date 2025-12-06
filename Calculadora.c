@@ -4,6 +4,11 @@
 int operadorValido(char operador);
 
 int main(){
+
+    char continuar;
+
+    do {
+
     float num1, num2, resultado;
     char operador;
 
@@ -14,8 +19,8 @@ int main(){
     scanf(" %c", &operador);
 
     if (operadorValido(operador) == 0) {
-        printf ("Operador inválido! \n");
-        return 1;
+        printf ("Operador invalido! \n");
+        continue; //utiliza o continue para voltar pro início do código
     }
 
     printf("Digite o segundo numero agora: \n");
@@ -40,7 +45,13 @@ int main(){
 
     printf("O resultado foi: %.2f \n", resultado);
 
-    system("pause");
+    printf("Deseja continuar? (S/N): \n");
+    scanf(" %c", &continuar);
+
+}
+
+    while (continuar == 'S' || continuar == 's');
+
 
     return 0;
 }
