@@ -9,58 +9,56 @@ int main(){
 
     do {
 
-    float num1, num2, resultado;
-    char operador;
+    float num1, num2;
+    int operador;
 
     printf("Digite o primeiro numero aqui: \n");
     scanf(" %f", &num1);
-
-    printf("Digite agora o operador: \n");
-    scanf(" %c", &operador);
-
-    if (operadorValido(operador) == 0) {
-        printf ("Operador invalido! \n");
-        continue; //utiliza o continue para voltar pro início do código
-    }
-
+    
     printf("Digite o segundo numero agora: \n");
     scanf(" %f", &num2);
 
-    if(operador == '+') {
-        resultado = num1 + num2;
-    } else if(operador == '-') {
-        resultado = num1 - num2;
-    } else if(operador == '*') {
-        resultado = num1 * num2;
-    } else if(operador == '/') {
-        if(num2 == 0) {
-            printf("Numero invalido, por favor coloque outro numero \n");
-            return 1;
-        } else {
-            resultado = num1 / num2;
-        }
-    } else if (operador == '^') {
-        resultado = pow(num1, num2);
-    }
+    printf("Qual operação vai realizar? \n");
+    printf(" 1 - Adicao \n");
+    printf(" 2 - Subtracao \n");
+    printf(" 3 - Multiplicacao \n");
+    printf(" 4 - Divisao \n");
+    printf(" 5 - Exponenciacao \n");
+    scanf(" %d", &operador);
 
-    printf("O resultado foi: %.2f \n", resultado);
+    switch (operador)
+    {
+    case 1: 
+        printf("O resultado da soma eh: %.2f \n", num1 + num2);
+        break;
+
+    case 2: 
+    printf("O resultado da subtracao eh: %.2f \n", num1 - num2);
+    break;
+
+    case 3: 
+    printf("O resultado da multiplicacao eh: %.2f \n", num1 * num2);
+    break;
+
+    case 4:
+    if(num2 == 0) {
+            printf("Numero invalido, por favor coloque outro numero \n");
+        } else {
+            printf("O resultado da divisao eh de: %.2f \n", num1 / num2); 
+        } 
+
+    case 5:
+    printf("O resultado da exponenciacao eh: %.2f \n", pow(num1, num2));
+
+    default:
+        break;
 
     printf("Deseja continuar? (S/N): \n");
     scanf(" %c", &continuar);
 
 }
-
+}
     while (continuar == 'S' || continuar == 's');
 
-
     return 0;
-}
-
-   int operadorValido(char operador) {
-    if (operador == '+' || operador == '-' || operador == '*' || operador == '/' || operador == '^') {
-        return 1;
-    } else {
-        return 0;
-    }
-
 }
