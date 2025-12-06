@@ -1,20 +1,18 @@
-#include <stdio.h>
 #include <math.h>
+#include <stdio.h>
 
-int operadorValido(char operador);
+int main() {
 
-int main(){
+  char continuar;
 
-    char continuar;
-
-    do {
+  do {
 
     float num1, num2;
     int operador;
 
     printf("Digite o primeiro numero aqui: \n");
     scanf(" %f", &num1);
-    
+
     printf("Digite o segundo numero agora: \n");
     scanf(" %f", &num2);
 
@@ -26,39 +24,36 @@ int main(){
     printf(" 5 - Exponenciacao \n");
     scanf(" %d", &operador);
 
-    switch (operador)
-    {
-    case 1: 
-        printf("O resultado da soma eh: %.2f \n", num1 + num2);
-        break;
+    switch (operador) {
+    case 1:
+      printf("O resultado da soma eh: %.2f \n", num1 + num2);
+      break;
 
-    case 2: 
-    printf("O resultado da subtracao eh: %.2f \n", num1 - num2);
-    break;
+    case 2:
+      printf("O resultado da subtracao eh: %.2f \n", num1 - num2);
+      break;
 
-    case 3: 
-    printf("O resultado da multiplicacao eh: %.2f \n", num1 * num2);
-    break;
+    case 3:
+      printf("O resultado da multiplicacao eh: %.2f \n", num1 * num2);
+      break;
 
     case 4:
-    if(num2 == 0) {
-            printf("Numero invalido, por favor coloque outro numero \n");
-        } else {
-            printf("O resultado da divisao eh de: %.2f \n", num1 / num2); 
-        } 
+      if (num2 == 0) {
+        printf("Numero invalido, por favor coloque outro numero \n");
+      } else {
+        printf("O resultado da divisao eh de: %.2f \n", num1 / num2);
+      }
 
     case 5:
-    printf("O resultado da exponenciacao eh: %.2f \n", pow(num1, num2));
+      printf("O resultado da exponenciacao eh: %.2f \n", pow(num1, num2));
 
     default:
-        break;
+      break;
 
-    printf("Deseja continuar? (S/N): \n");
-    scanf(" %c", &continuar);
+      printf("Deseja continuar? (S/N): \n");
+      scanf(" %c", &continuar);
+    }
+  } while (continuar == 'S' || continuar == 's');
 
-}
-}
-    while (continuar == 'S' || continuar == 's');
-
-    return 0;
+  return 0;
 }
