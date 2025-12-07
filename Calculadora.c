@@ -43,16 +43,30 @@ int main() {
       } else {
         printf("O resultado da divisao eh de: %.2f \n", num1 / num2);
       }
-
-    case 5:
-      printf("O resultado da exponenciacao eh: %.2f \n", pow(num1, num2));
-
-    default:
       break;
 
+    case 5: {
+
+    float base, expoente;
+
+    printf("Digite a base: \n");
+    scanf("%f", &base);
+
+    printf("Digite o expoente: \n");
+    scanf(" %f", &expoente);
+
+    printf("O resultado da exponenciacao eh: %.2f \n", pow(base, expoente) );
+    break;
+
+  }
+    default:
+    printf("Operacao invalida! \n");
+    break;
+  }
+    
       printf("Deseja continuar? (S/N): \n");
       scanf(" %c", &continuar);
-    }
+
   } while (continuar == 'S' || continuar == 's');
 
   return 0;
