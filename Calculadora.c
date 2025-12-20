@@ -7,14 +7,7 @@ int main() {
 
   do {
 
-    //float num1, num2;
     int operador;
-
-    //printf("Digite o primeiro numero aqui: \n");
-    //scanf(" %f", &num1);
-
-    //printf("Digite o segundo numero agora: \n");
-    //scanf(" %f", &num2);
 
     printf("Qual operacao vai realizar? \n");
     printf(" 1 - Adicao \n");
@@ -22,6 +15,7 @@ int main() {
     printf(" 3 - Multiplicacao \n");
     printf(" 4 - Divisao \n");
     printf(" 5 - Exponenciacao \n");
+    printf(" 6 - Radiciacao \n");
     scanf(" %d", &operador);
 
     switch (operador) {
@@ -93,6 +87,28 @@ int main() {
     break;
 
   }
+    case 6: {
+
+      float indice, radicando, resultado;
+
+      printf("Digite o indice \n");
+      scanf(" %f", &indice);
+
+      printf("Digite o radicando \n");
+      scanf(" %f", &radicando);
+
+      if(indice == 0) {
+        printf("Operacao com valor indeterminado \n");
+        break;
+      } 
+        else {
+        resultado = pow (radicando, 1.0/indice);
+        printf("O resultado sera: %.3f \n", resultado);
+
+        break;
+      }
+    }
+
     default:
     printf("Operacao invalida! \n");
     break;
