@@ -7,16 +7,16 @@ int main() {
 
   do {
 
-    float num1, num2;
+    //float num1, num2;
     int operador;
 
-    printf("Digite o primeiro numero aqui: \n");
-    scanf(" %f", &num1);
+    //printf("Digite o primeiro numero aqui: \n");
+    //scanf(" %f", &num1);
 
-    printf("Digite o segundo numero agora: \n");
-    scanf(" %f", &num2);
+    //printf("Digite o segundo numero agora: \n");
+    //scanf(" %f", &num2);
 
-    printf("Qual operação vai realizar? \n");
+    printf("Qual operacao vai realizar? \n");
     printf(" 1 - Adicao \n");
     printf(" 2 - Subtracao \n");
     printf(" 3 - Multiplicacao \n");
@@ -25,26 +25,60 @@ int main() {
     scanf(" %d", &operador);
 
     switch (operador) {
-    case 1:
+    case 1: { 
+    float num1, num2;
+
+      printf("Digite o primeiro numero aqui: \n");
+      scanf(" %f", &num1);
+
+      printf("Digite o segundo numero agora: \n");
+      scanf(" %f", &num2);
+
       printf("O resultado da soma eh: %.2f \n", num1 + num2);
       break;
+    }
 
-    case 2:
+    case 2: {
+    float num1, num2;
+
+      printf("Digite o primeiro numero aqui: \n");
+      scanf(" %f", &num1);
+
+      printf("Digite o segundo numero agora: \n");
+      scanf(" %f", &num2);
+
       printf("O resultado da subtracao eh: %.2f \n", num1 - num2);
       break;
+    }
 
-    case 3:
+    case 3: {
+    float num1, num2;
+
+      printf("Digite o primeiro numero aqui: \n");
+      scanf(" %f", &num1);
+
+      printf("Digite o segundo numero agora: \n");
+      scanf(" %f", &num2);
+
       printf("O resultado da multiplicacao eh: %.2f \n", num1 * num2);
       break;
+    }
+    case 4: {
+      float num1, num2;
 
-    case 4:
+      printf("Digite o primeiro numero aqui: \n");
+      scanf(" %f", &num1);
+
+      printf("Digite o segundo numero agora: \n");
+      scanf(" %f", &num2);
+
       if (num2 == 0) {
         printf("Numero invalido, por favor coloque outro numero \n");
       } else {
         printf("O resultado da divisao eh de: %.2f \n", num1 / num2);
       }
       break;
-
+    }
     case 5: {
 
     float base, expoente;
